@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100vh;
+  background-color: rgb(26, 28, 32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.text {
+  font-size: 36px;
+  cursor: pointer;
+  position: relative;
+}
+
+.text::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: linear-gradient(112.9deg, #285df3 48.18%, #00c2ff 94.06%);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.text:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
